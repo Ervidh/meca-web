@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario Interactivo</title>
+    
+    <style>
+ @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+ 
+       body {
+            font-family: "Acme", sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 350vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        button {
+            background-color: #740d0d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #440707;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #180101;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Exámen</h2>
+        <h2>¡Pon a prueba lo que aprendiste!</h2>
+        <form id="quizForm">
+            <h3>¿Que es la mecatronica?</h3>
+            <label><input type="radio" name="question1" value="La combinación de mecánica y electricidad.">a) La combinación de mecánica y electricidad.</label>
+            <label><input type="radio" name="question1" value="La integración de mecánica, electrónica y control.">b) La integración de mecánica, electrónica y control.</label>
+            <label><input type="radio" name="question1" value="El estudio de los robots únicamente.">c) El estudio de los robots únicamente.</label>
+            <label><input type="radio" name="question1" value="El diseño de sistemas informáticos.">d) El diseño de sistemas informáticos.</label>
+
+            <h3>¿Cuál de las siguientes disciplinas NO es parte de la mecatrónica?
+            </h3>
+            <label><input type="radio" name="question2" value="Electrónica">a) Electrónica.</label>
+            <label><input type="radio" name="question2" value="Biología.">b) Biología.
+            </label>
+            <label><input type="radio" name="question2" value="Programación.">c) Programación
+            </label>
+            <label><input type="radio" name="question2" value="Ingeniería de control">d) Ingeniería de control
+            </label>
+
+            <h3>Los sensores en un sistema mecatrónico se utilizan principalmente para:</h3>
+            <label><input type="radio" name="question3" value="Producir energía.">a) Producir energía.
+            </label>
+            <label><input type="radio" name="question3" value="Detectar y medir variables físicas.">b) Detectar y medir variables físicas.
+            </label>
+            <label><input type="radio" name="question3" value="Almacenar datos.">c) Almacenar datos.
+            </label>
+            <label><input type="radio" name="question3" value="Proteger circuitos eléctricos.">d) Proteger circuitos eléctricos.
+            </label>
+
+            <h3>Un ejemplo típico de un sistema mecatrónico es:</h3>
+            <label><input type="radio" name="question4" value="Un ventilador eléctrico.">a) Un ventilador eléctrico.
+            </label>
+            <label><input type="radio" name="question4" value="Un motor de combustión interna.">b) Un motor de combustión interna.
+            </label>
+            <label><input type="radio" name="question4" value="Un brazo robótico.">c) Un brazo robótico.
+            </label>
+            <label><input type="radio" name="question4" value="Una lámpara de escritorio.">d) Una lámpara de escritorio.
+            </label>
+
+            <h3>¿Qué componente en un sistema mecatrónico se encarga de tomar decisiones basadas en las entradas de los sensores?</h3>
+            <label><input type="radio" name="question5" value="Actuador">a) Actuador
+            </label>
+            <label><input type="radio" name="question5" value="Controlador.">b) Controlador
+            </label>
+            <label><input type="radio" name="question5" value="Sensor">c) Sensor
+            </label>
+            <label><input type="radio" name="question5" value="Motor">d) Motor
+            </label>
+
+            <h3>La mecatrónica es una disciplina que busca:
+            </h3>
+            <label><input type="radio" name="question6" value="Mejorar solo los aspectos mecánicos de un sistema.">a) Mejorar solo los aspectos mecánicos de un sistema.
+            </label>
+            <label><input type="radio" name="question6" value="Optimizar el uso de energía en procesos industriales.">b) Optimizar el uso de energía en procesos industriales.
+            </label>
+            <label><input type="radio" name="question6" value="Integrar mecánica, electrónica y sistemas de control en un solo producto.">c) Integrar mecánica, electrónica y sistemas de control en un solo producto.
+            </label>
+            <label><input type="radio" name="question6" value="Desarrollar software para la automatización de procesos.">d) Desarrollar software para la automatización de procesos.
+            </label>
+
+            <h3>¿Qué tipo de actuador se utiliza comúnmente en sistemas mecatrónicos?
+            </h3>
+            <label><input type="radio" name="question7" value="Neumático">a) Neumático
+            </label>
+            <label><input type="radio" name="question7" value="Hidráulico">b) Hidráulico
+            </label>
+            <label><input type="radio" name="question7" value="Motor eléctrico">c) Motor eléctrico
+            </label>
+            <label><input type="radio" name="question7" value="Todas las anteriores.">d) Todas las anteriores
+            </label>
+
+            <h3>El término "retroalimentación" en mecatrónica se refiere a:
+            </h3>
+            <label><input type="radio" name="question8" value="El suministro de energía al sistema.">a) El suministro de energía al sistema.</label>
+            <label><input type="radio" name="question8" value="La señal que devuelve el sistema para ajustar su comportamiento.">b) La señal que devuelve el sistema para ajustar su comportamiento.
+            </label>
+            <label><input type="radio" name="question8" value="La entrada inicial de datos.">c) La entrada inicial de datos.
+            </label>
+            <label><input type="radio" name="question8" value="La salida del sistema.">d) La salida del sistema.</label>
+
+            <h3>p 9</h3>
+            <label><input type="radio" name="question9" value="1990"> 1</label>
+            <label><input type="radio" name="question9" value="1995"> 2</label>
+            <label><input type="radio" name="question9" value="2000"> 3</label>
+            <label><input type="radio" name="question9" value="2005"> 4</label>
+
+            <h3>p 10</h3>
+            <label><input type="radio" name="question10" value="1990"> 1</label>
+            <label><input type="radio" name="question10" value="1995"> 2</label>
+            <label><input type="radio" name="question10" value="2000"> 3</label>
+            <label><input type="radio" name="question10" value="HTML"> 4</label>
+
+            <button type="button" onclick="checkAnswers()">Enviar Respuestas</button>
+        </form>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            // Respuestas correctas
+            const correctAnswers = {
+                question1: "La integración de mecánica, electrónica y control.",
+                question2: "Biología.",
+                question3: "Detectar y medir variables físicas.",
+                question4: "Un brazo robótico.",
+                question5: "Controlador.",
+                question6: "Integrar mecánica, electrónica y sistemas de control en un solo producto.",
+                question7: "Todas las anteriores.",
+                question8: "La señal que devuelve el sistema para ajustar su comportamiento.",
+                question9: "1995",
+                question10: "HTML",
+            };
+
+            // Obtenemos las respuestas del formulario
+            let score = 0;
+            const form = document.getElementById("quizForm");
+
+            const userAnswer1 = form.question1.value;
+            const userAnswer2 = form.question2.value;
+            const userAnswer3 = form.question3.value;
+            const userAnswer4 = form.question4.value;
+            const userAnswer5 = form.question5.value;
+            const userAnswer6 = form.question6.value;
+            const userAnswer7 = form.question7.value;
+            const userAnswer8 = form.question8.value;
+            const userAnswer9 = form.question9.value;
+            const userAnswer10 = form.question10.value;
+
+            // Comparamos las respuestas del usuario con las correctas
+            if (userAnswer1 === correctAnswers.question1) score++;
+            if (userAnswer2 === correctAnswers.question2) score++;
+            if (userAnswer3 === correctAnswers.question3) score++;
+            if (userAnswer4 === correctAnswers.question4) score++;
+            if (userAnswer5 === correctAnswers.question5) score++;
+            if (userAnswer6 === correctAnswers.question6) score++;
+            if (userAnswer7 === correctAnswers.question7) score++;
+            if (userAnswer8 === correctAnswers.question8) score++;
+            if (userAnswer9 === correctAnswers.question9) score++;
+            if (userAnswer10 === correctAnswers.question10) score++;
+            // Mostramos el resultado
+            const totalQuestions = Object.keys(correctAnswers).length;
+            const resultText = `Obtuviste ${score} de ${totalQuestions} respuestas correctas.`;
+            document.getElementById("result").innerText = resultText;
+        }
+    </script>
+</body>
+</html>

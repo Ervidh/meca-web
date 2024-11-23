@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>videos Tutoriales</title>
+    <link rel="stylesheet" href="tutoriales.css">
+</head>
+<body>
+    <div class="video-container">
+        <div class="tema-txt">
+            <h1>circuitos led en paralelos y en series.</h1>
+        </div>
+        <video id="videoPlayer" controls>
+            <source src="images/serie_paralelo.ogv" type="video/ogg">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+        <div class="controls">
+            <button id="playPauseBtn">Play</button>
+            <button id="muteBtn">Mute</button>
+            <input type="range" id="seekBar" value="0">
+            <input type="range" id="volumeBar" value="1" min="0" max="1" step="0.1">
+            <span id="currentTime">1:00</span> / <span id="duration">1:00</span>
+        </div>
+        <div class="tema-txt">
+        </div>
+       
+    </div>
+
+
+    <script src="tutoriales.js"></script>
+</body>
+</html>
+
