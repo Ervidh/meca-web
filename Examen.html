@@ -140,17 +140,7 @@
             </label>
             <label><input type="radio" name="question8" value="La salida del sistema.">d) La salida del sistema.</label>
 
-            <h3>p 9</h3>
-            <label><input type="radio" name="question9" value="1990"> 1</label>
-            <label><input type="radio" name="question9" value="1995"> 2</label>
-            <label><input type="radio" name="question9" value="2000"> 3</label>
-            <label><input type="radio" name="question9" value="2005"> 4</label>
-
-            <h3>p 10</h3>
-            <label><input type="radio" name="question10" value="1990"> 1</label>
-            <label><input type="radio" name="question10" value="1995"> 2</label>
-            <label><input type="radio" name="question10" value="2000"> 3</label>
-            <label><input type="radio" name="question10" value="HTML"> 4</label>
+   
 
             <button type="button" onclick="checkAnswers()">Enviar Respuestas</button>
         </form>
@@ -160,7 +150,7 @@
 
     <script>
         function checkAnswers() {
-            // Respuestas correctas
+   
             const correctAnswers = {
                 question1: "La integración de mecánica, electrónica y control.",
                 question2: "Biología.",
@@ -170,11 +160,10 @@
                 question6: "Integrar mecánica, electrónica y sistemas de control en un solo producto.",
                 question7: "Todas las anteriores.",
                 question8: "La señal que devuelve el sistema para ajustar su comportamiento.",
-                question9: "1995",
-                question10: "HTML",
+      
             };
 
-            // Obtenemos las respuestas del formulario
+            
             let score = 0;
             const form = document.getElementById("quizForm");
 
@@ -186,10 +175,9 @@
             const userAnswer6 = form.question6.value;
             const userAnswer7 = form.question7.value;
             const userAnswer8 = form.question8.value;
-            const userAnswer9 = form.question9.value;
-            const userAnswer10 = form.question10.value;
 
-            // Comparamos las respuestas del usuario con las correctas
+
+           
             if (userAnswer1 === correctAnswers.question1) score++;
             if (userAnswer2 === correctAnswers.question2) score++;
             if (userAnswer3 === correctAnswers.question3) score++;
@@ -198,9 +186,8 @@
             if (userAnswer6 === correctAnswers.question6) score++;
             if (userAnswer7 === correctAnswers.question7) score++;
             if (userAnswer8 === correctAnswers.question8) score++;
-            if (userAnswer9 === correctAnswers.question9) score++;
-            if (userAnswer10 === correctAnswers.question10) score++;
-            // Mostramos el resultado
+
+
             const totalQuestions = Object.keys(correctAnswers).length;
             const resultText = `Obtuviste ${score} de ${totalQuestions} respuestas correctas.`;
             document.getElementById("result").innerText = resultText;
